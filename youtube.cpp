@@ -1,15 +1,10 @@
 #include <iostream>
 
 using std::cout;
-using std::cin;
+using std::endl;
 
-int main() 
+int main()
 {
-    int slices;
-
-    cout << "Y0 fatty how many pieces of pizza you eat?: ";
-
-    cin >> slices;
-
-    cout << "you have " << slices << " slices of pizza." << std::endl;
+    bool pizza_is_good = 0;
+    cout << pizza_is_good << endl;
 }
