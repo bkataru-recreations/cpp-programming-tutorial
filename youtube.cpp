@@ -3,8 +3,20 @@
 #include <cstdlib>
 #include <ctime>
 
-void play_game()
+void print_array(int array[], int count)
 {
+    for(int i = 0; i < count; i++)
+    {
+        std::cout << array[i] << "\t";
+    }
+    std::cout << std::endl;
+}
+
+void play_game()
+{   
+    int guesses[251];
+    int guess_count = 0;
+
     int random = rand() % 251;
     std::cout << random << std::endl;
 
@@ -13,6 +25,8 @@ void play_game()
         int guess;
         std::cin >> guess;
         
+        guesses[guess_count++] = guess;
+
         if (guess == random)
         {
             std::cout << "you win" << std::endl;
@@ -27,6 +41,7 @@ void play_game()
             std::cout << "too high" << std::endl;
         }
     }
+    print_array(guesses, guess_count);
 }
 
 int main()
